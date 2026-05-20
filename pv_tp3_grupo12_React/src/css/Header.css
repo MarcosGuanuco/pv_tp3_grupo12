@@ -1,0 +1,17 @@
+:root{
+  --color-fondo:black;
+  --colol-texto:white;
+  --color-hover: #007bff;
+}
+header {
+  background-color: var(--color-fondo);
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  margin: 15px 0;
+  color: var(--colol-texto);
+}
