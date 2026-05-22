@@ -9,6 +9,7 @@ import Nav from './components/Nav'
 import ListaProyectos from './components/ListaProyectos'
 import Footer from './components/Footer'
 import Home from './components/home'
+import Proyectos from './components/Proyectos'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <Header/>
     <Nav/>
     <main>
-      <Home/>
+      <Proyectos/>
     </main>
     <Footer/>
     </>
