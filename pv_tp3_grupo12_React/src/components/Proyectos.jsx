@@ -30,14 +30,14 @@ function Proyectos() {
                 <h2>Proyecto HTML/CSS</h2>
                 <img src="/img/imagen.jpg" alt="imagen del proyecto 1" width="200" />
                 <p>En este proyecto se desarrollaron las habilidades en HTML y CSS para crear una interfaz de usuario atractiva y funcional.</p>
-                <p> categoria: En proceso</p>
+                <p> categoria: Finalizado</p>
                 <a href="#" >Ver más detalles</a>
             </article>
             <article className='articulo'>
                 <h2>Proyecto JavaScript</h2>
                 <img src="/img/imagen.jpg" alt="imagen del proyecto 1" width="200" />
                 <p>En este proyecto se desarrollaron las habilidades en JavaScript para crear una experiencia de usuario interactiva y dinámica.</p>
-                <p> categoria: en curso</p>
+                <p> categoria: Finalizado</p>
                 <a href="#" >Ver más detalles</a>
             </article>
             <article className='articulo'>
@@ -72,7 +72,7 @@ function Proyectos() {
                 <h2>Proyecto Angular</h2>
                 <img src="/img/imagen.jpg" alt="imagen del proyecto 1" width="200" />
                 <p>En este proyecto se desarrollaron las habilidades en Angular para crear una aplicación web completa con funcionalidades avanzadas.</p>
-                <p> categoria: finalizado</p>
+                <p> categoria: en curso</p>
                 <a href="#" >Ver más detalles</a>
             </article>
         </div>
