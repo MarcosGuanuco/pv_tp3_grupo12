@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { obtenerProyectos, buscarProyecto } from "../services/proyectoService";
+import { obtenerProyectos, buscarProyecto, eliminarProyecto} from "../services/proyectoService";
 import '../css/ListaProyecto.css'
 
 function ListaProyectos() {
@@ -25,13 +25,20 @@ function ListaProyectos() {
           <p><strong>ID:</strong> {p.id}</p>
           <p><strong>Categoría:</strong> {p.categoria}</p>
           <p><strong>Estado:</strong> {p.estado}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</main>
-
-  );
-}
+          
+          <button onClick={() => {
+            eliminarProyecto(p.id);
+            setProyectos(obtenerProyectos());
+            }}>
+              Eliminar Proyecto
+              </button>
+              </div>
+            ))}
+            </div>
+            </div>
+            
+            </main>
+            );
+          }
 
 export default ListaProyectos;
