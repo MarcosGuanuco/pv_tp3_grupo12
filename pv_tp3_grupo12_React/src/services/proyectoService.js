@@ -1,4 +1,3 @@
-// proyectoService.js
 let proyectos = [
     {id:1, titulo:"Proyecto HTML/CSS", categoria:"Web", estado:"Finalizado"},
     {id:2, titulo:"Proyecto JavaScript", categoria:"Web", estado:"Finalizado"},
@@ -15,4 +14,8 @@ export const buscarProyecto = (texto) => {
   
 export const eliminarProyecto = (id) => {
   proyectos = proyectos.filter(p => p.id !== id);
+};
+
+export const agregarProyecto = (proyecto) => {
+  proyectos.push(proyecto);
 };

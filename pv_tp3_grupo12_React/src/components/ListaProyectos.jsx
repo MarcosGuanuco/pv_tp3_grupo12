@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { obtenerProyectos, buscarProyecto, eliminarProyecto} from "../services/proyectoService";
+import { obtenerProyectos, buscarProyecto, eliminarProyecto, agregarProyecto} from "../services/proyectoService";
 import '../css/ListaProyecto.css'
 
 function ListaProyectos() {
@@ -17,6 +17,24 @@ function ListaProyectos() {
     <main>
   <div className="container">
     <h2>Lista de Proyectos</h2>
+    <form className="form-agregar" onSubmit={(e) => {
+  e.preventDefault();
+  const nuevoProyecto = {
+    id: proyectos.length + 1,
+    titulo: e.target.titulo.value,
+    categoria: e.target.categoria.value,
+    estado: e.target.estado.value
+  };
+  agregarProyecto(nuevoProyecto);
+  setProyectos(obtenerProyectos());
+  e.target.reset();
+}}>
+  <input type="text" name="titulo" placeholder="Título del proyecto" required />
+  <input type="text" name="categoria" placeholder="Categoría" required />
+  <input type="text" name="estado" placeholder="Estado" required />
+  <button type="submit">Agregar Proyecto</button>
+</form>
+
     <input type="text" placeholder="Buscar proyecto..." value={busqueda} onChange={handleBuscar}/>
     <div className="cards">
       {proyectos.map(p => (
