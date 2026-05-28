@@ -25,3 +25,25 @@
   color: #337bc4;
   margin-top: 15px;
 }
+.secciondetalles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secciondetalles li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.btn-detalles {
+  color:  #1130447c;
+  border-color: #0099ff7c;
+  background-color: rgba(194, 205, 255, 0.514);
+}
+
+.btn-eliminar {
+  color: rgba(107, 16, 16, 0.582);
+  border-color: #a1565681;
+  background-color: rgba(252, 204, 204, 0.493);
+}

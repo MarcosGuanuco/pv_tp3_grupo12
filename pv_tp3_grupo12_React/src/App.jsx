@@ -10,6 +10,8 @@ import ListaProyectos from './components/ListaProyectos'
 import Footer from './components/Footer'
 import Home from './components/home'
 import Proyectos from './components/Proyectos'
+import Detalles from './components/Detalles'
+import DetallesProyectos from './components/DetallesProyectos'
 
 
 function App() {

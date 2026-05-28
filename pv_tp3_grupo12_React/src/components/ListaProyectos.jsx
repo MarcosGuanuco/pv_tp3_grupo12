@@ -1,17 +1,18 @@
 import { useState } from "react";
+import Detalles from "./Detalles";
+import DetallesProyectos from "./DetallesProyectos";
 import { obtenerProyectos, buscarProyecto, eliminarProyecto, agregarProyecto} from "../services/proyectoService";
 import '../css/ListaProyecto.css'
 
 function ListaProyectos() {
   const [proyectos, setProyectos] = useState(obtenerProyectos());
   const [busqueda, setBusqueda] = useState("");
-
   const handleBuscar = (e) =>{
     const texto = e.target.value;
     setBusqueda(texto);
-    setProyectos(buscarProyecto(texto));
-
+    setProyectos(buscarProyecto(texto)); 
   };
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
 
   return (
     <main>
@@ -44,15 +45,39 @@ function ListaProyectos() {
           <p><strong>Categoría:</strong> {p.categoria}</p>
           <p><strong>Estado:</strong> {p.estado}</p>
           
-          <button onClick={() => {
+          <div>
+          <button className="btn-detalles" onClick={() => {
+             const detalle = DetallesProyectos.find(d => d.id === p.id);
+             if (detalle) {
+              setProyectoSeleccionado(detalle);
+            } else {
+              setProyectoSeleccionado({
+                titulo: p.titulo,
+                fecha: "Sin fecha",
+                autores: ["No especificados"],
+                descripcion: ["No hay descripción disponible."],
+                recursos: [],
+                integrantes: []
+              });
+            }
+            }}>
+              Ver detalles
+              </button>
+          </div>
+          <button className="btn-eliminar" onClick={() => {
             eliminarProyecto(p.id);
             setProyectos(obtenerProyectos());
             }}>
               Eliminar Proyecto
               </button>
+              <div>
+
               </div>
+              </div>
+              
             ))}
             </div>
+            <Detalles proyecto={proyectoSeleccionado} />
             </div>
             
             </main>
