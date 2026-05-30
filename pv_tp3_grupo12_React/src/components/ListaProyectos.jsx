@@ -1,11 +1,6 @@
 import { useState } from "react";
 import Detalles from "./Detalles";
-import {
-  obtenerProyectos,
-  buscarProyecto,
-  eliminarProyecto,
-  agregarProyecto
-} from "../services/proyectoService";
+import {obtenerProyectos, buscarProyecto, eliminarProyecto,agregarProyecto} from "../services/proyectoService";
 import ProyectoCard from "./ProyectoCard";
 import "../css/ListaProyecto.css";
 
@@ -73,11 +68,12 @@ function ListaProyectos() {
 
   return (
     <main>
+
       <div className="container">
         <h2>Lista de Proyectos</h2>
         <div>
-        <button onClick={() => setMostrarForm(!mostrarForm)}>
-          {mostrarForm ? "Cerrar formulario" : "Agregar proyecto"}
+        <button className="btn-desplegable" onClick={() => setMostrarForm(!mostrarForm)}>
+          {mostrarForm ? "Cerrar" : "Agregar proyecto"}
           </button>
           </div>
         {mostrarForm && (
@@ -85,12 +81,15 @@ function ListaProyectos() {
           <input type="text" name="titulo" value={titulo} onChange={handleChange} placeholder="Título del proyecto" required />
           <input type="text" name="categoria" value={categoria} onChange={handleChange}placeholder="Categoría"required/>
           <input type="text" name="estado" value={estado}  onChange={handleChange} placeholder="Estado" required /> 
-          <button type="submit">Guardar</button>
+          <button clastype="submit">Guardar</button>
           </form>
   
         )}
         <b></b>
+
+
         <input type="text" placeholder="Buscar proyecto..." value={busqueda} onChange={handleBuscar} />
+
 
         <div className="cards">
           {proyectos.map((proyecto) => (
@@ -102,7 +101,6 @@ function ListaProyectos() {
             />
           ))}
         </div>
-
         <Detalles proyecto={proyectoSeleccionado} />
       </div>
     </main>

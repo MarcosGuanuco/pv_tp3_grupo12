@@ -11,10 +11,10 @@ let proyectos = [
       "Se aplicaron conceptos de maquetación, estilos y diseño responsive."
     ],
     recursos: [
-      { nombre: "PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Ana", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" }
     ]
   },
   {
@@ -29,10 +29,10 @@ let proyectos = [
     "También se trabajó con estructuras de control, arrays y objetos. El objetivo fue comprender el comportamiento dinámico de las páginas web."
   ],
     recursos: [
-      { nombre: "PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Ana", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" }
     ]
   },
     {
@@ -47,10 +47,10 @@ let proyectos = [
     "Además, se trabajó con listas y archivos para resolver problemas. El objetivo fue adquirir una base sólida en programación."
   ],
     recursos: [
-      { nombre: "PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Ana", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" }
     ]
   },
     {
@@ -65,10 +65,10 @@ let proyectos = [
     "Se trabajó con props y estado para manejar la información. El objetivo fue comprender el desarrollo moderno basado en componentes."
   ],
     recursos: [
-      { nombre: "PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Ana", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" }
     ]
   },
     {
@@ -82,10 +82,10 @@ let proyectos = [
     "Este proyecto amplió los conocimientos en React mediante el uso de hooks y manejo avanzado de estado. Se implementaron funcionalidades como useState y useEffect para controlar el ciclo de vida de los componentes. Además, se trabajó con consumo de APIs para mostrar datos dinámicos. Se mejoró la organización del código mediante componentes reutilizables. El objetivo fue profundizar en el desarrollo de aplicaciones modernas y escalables."
   ],
     recursos: [
-      { nombre: "PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Ana", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" }
     ]
   },
 ];
