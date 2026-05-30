@@ -13,7 +13,7 @@ function Detalles({ proyecto }) {
         <h1>{titulo}</h1>
         <h4>Fecha: {fecha}</h4>
 
-        <h4>Autores:</h4>
+        <h2>Autores</h2>
         <ul>
            {autores.map((autor, index) => (
             <li key={index}>{autor}</li>
