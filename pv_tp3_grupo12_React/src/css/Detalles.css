@@ -40,10 +40,12 @@
   color:  #1130447c;
   border-color: #0099ff7c;
   background-color: rgba(194, 205, 255, 0.514);
+ padding: 5px 38px;
 }
 
 .btn-eliminar {
   color: rgba(107, 16, 16, 0.582);
   border-color: #a1565681;
   background-color: rgba(252, 204, 204, 0.493);
+  padding: 5px 20px;
 }
