@@ -3,6 +3,7 @@ import Detalles from "./Detalles";
 import {obtenerProyectos, buscarProyecto, eliminarProyecto,agregarProyecto} from "../services/proyectoService";
 import ProyectoCard from "./ProyectoCard";
 import "../css/ListaProyecto.css";
+import { useRef } from "react";
 
 function ListaProyectos() {
   const [proyectos, setProyectos] = useState(obtenerProyectos());
@@ -64,8 +65,17 @@ function ListaProyectos() {
     setProyectos(obtenerProyectos());
     setProyectoSeleccionado(null); // 
   };
-  const [mostrarForm, setMostrarForm] = useState(false);
 
+    const verDetalle = (proyecto) => {
+    setProyectoSeleccionado(proyecto);
+
+    setTimeout(() => {
+      detallesRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
+  const [mostrarForm, setMostrarForm] = useState(false);
+  const detallesRef = useRef(null);
   return (
     <main>
 
@@ -97,10 +107,11 @@ function ListaProyectos() {
               key={proyecto.id}
               proyecto={proyecto}
               onEliminar={eliminar}
-              onVerDetalle={setProyectoSeleccionado}
+               onVerDetalle={verDetalle}
             />
           ))}
         </div>
+        <div ref={detallesRef}></div>
         <Detalles proyecto={proyectoSeleccionado} />
       </div>
     </main>

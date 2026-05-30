@@ -7,14 +7,17 @@ let proyectos = [
     fecha: "01/04/2026",
     autores: ["Amador Juan Pablo", "Guanuco Marcos Ezequiel"],
     descripcion: [
-      "Se desarrolló una página web utilizando HTML y CSS.",
-      "Se aplicaron conceptos de maquetación, estilos y diseño responsive."
+      "Este proyecto consiste en el desarrollo de una página web básica utilizando HTML y CSS. Se implementó una estructura semántica que incluye encabezado, navegación, contenido principal y pie de página.",
+      "Además, se aplicaron estilos con CSS para mejorar la presentación visual, utilizando colores, tipografías y diseño en tarjetas. El objetivo principal fue comprender los fundamentos del diseño web."
     ],
     recursos: [
-      { nombre: "Archivo PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" },
+      { nombre: "Repositorio Github", link: "#" },
+      { nombre: "Clases gravadas", link: "#" }
     ],
     integrantes: [
-      { nombre: "Santiago", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" },
+      { nombre: "Marocs", rol: "Backend" }
     ]
   },
   {
@@ -32,7 +35,8 @@ let proyectos = [
       { nombre: "Archivo PDF", link: "#" }
     ],
     integrantes: [
-      { nombre: "Santiago", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" },
+      { nombre: "Marocos", rol: "Backend" }
     ]
   },
     {
@@ -47,10 +51,13 @@ let proyectos = [
     "Además, se trabajó con listas y archivos para resolver problemas. El objetivo fue adquirir una base sólida en programación."
   ],
     recursos: [
-      { nombre: "Archivo PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" },
+      { nombre: "Repositorio Github", link: "#" },
+      { nombre: "Clases gravadas", link: "#" }
     ],
     integrantes: [
-      { nombre: "Santiago", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" },
+      { nombre: "Dross", rol: "Backend" }
     ]
   },
     {
@@ -65,10 +72,13 @@ let proyectos = [
     "Se trabajó con props y estado para manejar la información. El objetivo fue comprender el desarrollo moderno basado en componentes."
   ],
     recursos: [
-      { nombre: "Archivo PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" },
+      { nombre: "Repositorio Github", link: "#" },
+      { nombre: "Clases gravadas", link: "#" }
     ],
     integrantes: [
-      { nombre: "Santiago", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" },
+      { nombre: "Marocs", rol: "Backend" }
     ]
   },
     {
@@ -82,10 +92,13 @@ let proyectos = [
     "Este proyecto amplió los conocimientos en React mediante el uso de hooks y manejo avanzado de estado. Se implementaron funcionalidades como useState y useEffect para controlar el ciclo de vida de los componentes. Además, se trabajó con consumo de APIs para mostrar datos dinámicos. Se mejoró la organización del código mediante componentes reutilizables. El objetivo fue profundizar en el desarrollo de aplicaciones modernas y escalables."
   ],
     recursos: [
-      { nombre: "Archivo PDF", link: "#" }
+      { nombre: "Archivo PDF", link: "#" },
+      { nombre: "Repositorio Github", link: "#" },
+      { nombre: "Clases gravadas", link: "#" }
     ],
     integrantes: [
-      { nombre: "Santiago", rol: "Frontend" }
+      { nombre: "Santiago", rol: "Frontend" },
+      { nombre: "Marcos", rol: "Backend" }
     ]
   },
 ];
