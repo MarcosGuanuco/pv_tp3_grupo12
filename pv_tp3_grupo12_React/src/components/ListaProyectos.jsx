@@ -19,9 +19,7 @@ function ListaProyectos() {
   const { titulo, categoria, estado } = form;
 
   const handleBuscar = (e) => {
-    const { value } = e.target;
-    setBusqueda(value);
-    setProyectos(buscarProyecto(value));
+     setBusqueda(e.target.value);
   };
 
   const handleChange = (e) => {
@@ -76,11 +74,18 @@ function ListaProyectos() {
 
   const [mostrarForm, setMostrarForm] = useState(false);
   const detallesRef = useRef(null);
+
+  const primeraCarga = useRef(true);
+  const proyectosFiltrados = proyectos.filter(p => p.titulo.toLowerCase().includes(busqueda.toLowerCase()));
   
   useEffect(() => {
+    if (primeraCarga.current) {
+      primeraCarga.current = false;
+      return; 
+    }
     setUltimaActualizacion(new Date());
   }, [proyectos]);
-
+  
   return (
     <main>
 
@@ -107,7 +112,7 @@ function ListaProyectos() {
 
 
         <div className="cards">
-          {proyectos.map((proyecto) => (
+          {proyectosFiltrados.map((proyecto) => (
             <ProyectoCard
               key={proyecto.id}
               proyecto={proyecto}
