@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Detalles from "./Detalles";
 import {obtenerProyectos, buscarProyecto, eliminarProyecto,agregarProyecto} from "../services/proyectoService";
 import ProyectoCard from "./ProyectoCard";
 import "../css/ListaProyecto.css";
-import { useRef } from "react";
+import RegistroActividad from "./RegistroActividad";
 
 function ListaProyectos() {
   const [proyectos, setProyectos] = useState(obtenerProyectos());
   const [busqueda, setBusqueda] = useState("");
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
-
+  const [ultimaActualizacion, setUltimaActualizacion] = useState(null);
   const [form, setForm] = useState({
     titulo: "",
     categoria: "",
@@ -76,6 +76,11 @@ function ListaProyectos() {
 
   const [mostrarForm, setMostrarForm] = useState(false);
   const detallesRef = useRef(null);
+  
+  useEffect(() => {
+    setUltimaActualizacion(new Date());
+  }, [proyectos]);
+
   return (
     <main>
 
@@ -91,7 +96,7 @@ function ListaProyectos() {
           <input type="text" name="titulo" value={titulo} onChange={handleChange} placeholder="Título del proyecto" required />
           <input type="text" name="categoria" value={categoria} onChange={handleChange}placeholder="Categoría"required/>
           <input type="text" name="estado" value={estado}  onChange={handleChange} placeholder="Estado" required /> 
-          <button clastype="submit">Guardar</button>
+          <button className="btn-guardar" type="submit">Guardar</button>
           </form>
   
         )}
@@ -111,6 +116,9 @@ function ListaProyectos() {
             />
           ))}
         </div>
+
+        <RegistroActividad ultimaActualizacion={ultimaActualizacion} />
+
         <div ref={detallesRef}></div>
         <Detalles proyecto={proyectoSeleccionado} />
       </div>
