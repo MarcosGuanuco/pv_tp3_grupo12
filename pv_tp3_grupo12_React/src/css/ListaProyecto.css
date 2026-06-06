@@ -112,3 +112,6 @@ input[type="text"]:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.registro {
+  background: #a0a0a0;
+}
