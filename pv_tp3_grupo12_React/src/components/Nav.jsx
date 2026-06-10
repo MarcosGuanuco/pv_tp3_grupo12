@@ -1,13 +1,14 @@
 import '../css/Nav.css'
+import { NavLink } from 'react-router-dom'
 function Nav(){
     return(
         <nav id='menu'>
-                <ul>
-                    <li><a href="#">Principal</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Detalles Proyectos</a></li>
-                    <li><a href="#">Perfil</a></li>
-                </ul>
+            <ul>
+            <NavLink to="/" className="nav-item">Inicio</NavLink>
+            <NavLink to="/proyectos" className="nav-item">Proyectos</NavLink>
+            <NavLink to="/detalles" className="nav-item">Detalles</NavLink>
+            <NavLink to="/perfil" className="nav-item">Perfil</NavLink>
+            </ul>
         </nav>
     )
 }

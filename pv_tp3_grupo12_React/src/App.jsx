@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header'
 import Nav from './components/Nav'
@@ -12,6 +13,7 @@ import Home from './components/home'
 import Proyectos from './components/Proyectos'
 import Detalles from './components/Detalles'
 import DetallesProyectos from './components/DetallesProyectos'
+import Perfil from './components/Perfil'
 
 
 function App() {
@@ -19,12 +21,20 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
     <Header/>
     <Nav/>
     <main>
-      <ListaProyectos/>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/proyectos" element={<ListaProyectos />} />
+          <Route path="/proyectos/:id" element={<DetallesProyectos />} />
+          <Route path="/detalles" element={<Detalles />} />
+          <Route path="/perfil" element={<Perfil />} />
+        </Routes>
     </main>
     <Footer/>
+    </BrowserRouter>
     </>
   )
 }

@@ -3,20 +3,16 @@
   --colol-texto:white;
   --color-hover: #007bff;
 }
-nav {
+
+#menu {
   background-color: var(--color-fondo);
   padding: 20px;
   border-bottom: 2px solid #ccc;
-}
-
-#menu ul {
-  list-style: none;
-  padding: 0;
   display: flex;
   gap: 20px;
 }
 
-#menu a {
+#menu .nav-item {
   text-decoration: none;
   color: var(--colol-texto);
   font-weight: 500;
@@ -24,9 +20,10 @@ nav {
   border-radius: 5px;
   padding: 10px;
   background-color: #007bff;
+  margin: 5px;
 }
 
-#menu a:hover {
+#menu .nav-item:hover {
   color: var(--color-hover);
   background-color: #333;
 } 
