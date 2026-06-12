@@ -1,6 +1,8 @@
+import { Alert } from "@mui/material";
+
 function RegistroActividad({ ultimaActualizacion }) {
   if (!ultimaActualizacion) {
-    return <p>Sin cambios aun</p>;
+    return <Alert severity="info">Sin cambios aún...</Alert>;
   }
 
   const fecha = ultimaActualizacion;
@@ -13,11 +15,9 @@ function RegistroActividad({ ultimaActualizacion }) {
   const minutos = String(fecha.getMinutes()).padStart(2, "0");
 
   return (
-    <div className="registro">
-      <p>
+    <Alert severity="success">
         Última actualización de la lista: {dia}/{mes}/{anio} a las {horas}:{minutos} hs.
-      </p>
-    </div>
+      </Alert>
   );
 }
 
