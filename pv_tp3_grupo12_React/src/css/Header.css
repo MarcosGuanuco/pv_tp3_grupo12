@@ -3,16 +3,41 @@
   --colol-texto:white;
   --color-hover: #007bff;
 }
+
 header {
   background-color: var(--color-fondo);
-  padding: 10px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #007bff;
   letter-spacing: 5px;
+  display: flex;        
+  align-items: center;       
+  justify-content: center;              
+  padding: 5px;
+  
 }
 
-.titulo {
+.titulo{
   text-align: center;
-  font-size: 40px;
-  margin: 15px 0;
+  margin: 0;
   color: var(--colol-texto);
+}
+
+
+.header_texto{
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+  color: var(--colol-texto);
+  flex: 1;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header_img {
+  width: 120px;
+  animation: girar 6s linear infinite;
+  margin-right: -150PX;
 }
