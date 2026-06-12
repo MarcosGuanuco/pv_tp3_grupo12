@@ -1,5 +1,5 @@
 :root{
-  --color-fondo:black;
+  --color-fondo:rgb(0, 0, 30);
   --colol-texto:white;
   --color-hover: #007bff;
 }
@@ -24,7 +24,7 @@ header {
 
 .header_texto{
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
   color: var(--colol-texto);
   flex: 1;
