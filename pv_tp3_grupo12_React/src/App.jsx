@@ -14,7 +14,8 @@ import Proyectos from './components/Proyectos'
 import Detalles from './components/Detalles'
 import DetallesProyectos from './components/DetallesProyectos'
 import Perfil from './components/Perfil'
-
+import Dashboard from './views/Dashboard'
+import PerfilUsuario from './views/PerfilUsuario'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,11 +27,11 @@ function App() {
     <Nav/>
     <main>
       <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/proyectos" element={<ListaProyectos />} />
           <Route path="/proyectos/:id" element={<DetallesProyectos />} />
           <Route path="/detalles" element={<Detalles />} />
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
         </Routes>
     </main>
     <Footer/>

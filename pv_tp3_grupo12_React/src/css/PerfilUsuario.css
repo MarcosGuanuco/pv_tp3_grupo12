@@ -1,0 +1,16 @@
+.perfil-container {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.perfil-title, .integrantes-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.perfil-card {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
