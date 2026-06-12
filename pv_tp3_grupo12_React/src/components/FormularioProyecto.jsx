@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TextField, Button, Box } from "@mui/material";
 
 function FormularioProyecto({ onAgregar }) {
   const [form, setForm] = useState({
@@ -42,33 +43,37 @@ function FormularioProyecto({ onAgregar }) {
   };
 
   return (
-    <form className="form-agregar" onSubmit={handleSubmit}>
-      <input
-        type="text"
+    <Box
+      component="form"
+      className="form-agregar"
+      onSubmit={handleSubmit}
+      sx={{ display: "flex", flexDirection: "column", gap: 2, maxWidth: 400, margin: "0 auto" }}
+    >
+      <TextField
+        label="Título del proyecto"
         name="titulo"
         value={titulo}
         onChange={handleChange}
-        placeholder="Título del proyecto"
         required
       />
-      <input
-        type="text"
+      <TextField
+        label="Categoría"
         name="categoria"
         value={categoria}
         onChange={handleChange}
-        placeholder="Categoría"
         required
       />
-      <input
-        type="text"
+      <TextField
+        label="Estado"
         name="estado"
         value={estado}
         onChange={handleChange}
-        placeholder="Estado"
         required
       />
-      <button className="btn-guardar" type="submit">Guardar</button>
-    </form>
+      <Button variant="contained" color="primary" type="submit">
+        Guardar
+      </Button>
+    </Box>
   );
 }
 
