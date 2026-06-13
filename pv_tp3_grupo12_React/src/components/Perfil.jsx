@@ -26,7 +26,7 @@ function Perfil() {
 
     return (
 
-        <main>
+        <div className='perfil-container'>
 
             <h2>Informacion Personal</h2>
 
@@ -58,7 +58,7 @@ function Perfil() {
 
             </table>
 
-        </main>
+        </div>
     )
 }
 

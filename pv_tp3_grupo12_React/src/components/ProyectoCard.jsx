@@ -1,30 +1,52 @@
+import { Card, CardContent, CardMedia, Typography, Button, CardActions } from "@mui/material";
 import progImg from "../assets/prog.jpg";
-function ProyectoCard({ proyecto, onEliminar, onVerDetalle }) {
 
-  const { id, titulo, imagen, categoria, estado } = proyecto;
+function ProyectoCard({ proyecto, onEliminar, onVerDetalle }) {
+  const { id, titulo, categoria, estado } = proyecto;
 
   return (
-    <div className="card">
-      <h3>{titulo}</h3>
-      <img src={progImg} alt="Imagen del proyecto" />
-      <p><strong>ID:</strong> {id}</p>
-      <p><strong>Categoría:</strong> {categoria}</p>
-      <p><strong>Estado:</strong> {estado}</p>
-      <div>
-      <button
-        className="btn-detalles"
-        onClick={() => onVerDetalle(proyecto)}
-      >
-        Ver detalles
-      </button>
-      </div>
-      <button
-        className="btn-eliminar"
-        onClick={() => onEliminar(id)}
-      >
-        Eliminar Proyecto
-      </button>
-    </div>
+    <Card sx={{ maxWidth: 345, margin: "auto" }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={progImg}
+        alt="Imagen del proyecto"
+      />
+
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="div">
+          {titulo}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <strong>ID:</strong> {id}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <strong>Categoría:</strong> {categoria}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <strong>Estado:</strong> {estado}
+        </Typography>
+      </CardContent>
+
+      <CardActions>
+        <Button
+          size="small"
+          variant="contained"
+          color="primary"
+          onClick={() => onVerDetalle(proyecto)}
+        >
+          Ver detalles
+        </Button>
+        <Button
+          size="small"
+          variant="outlined"
+          color="error"
+          onClick={() => onEliminar(id)}
+        >
+          Eliminar
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
 

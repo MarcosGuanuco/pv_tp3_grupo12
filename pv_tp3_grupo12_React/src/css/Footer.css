@@ -1,18 +1,45 @@
 :root{
-  --color-fondo:black;
+  --color-fondo:rgb(0, 0, 30);
   --colol-texto:white;
   --color-hover: #007bff;
 }
 .footer {
   background-color: var(--color-fondo);
-  padding: 15px;
+  padding: 5px;
   text-align: center;
-  border-top: 2px solid #ccc;
+  color: var(--colol-texto)
 }
 
-.footer-container h2 {
+.footer-container{
   margin: 0;
   color: var(--colol-texto);
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: rgb(0, 225, 255) 3px 10px 6px;
+  text-decoration: underline;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap; 
+  text-align:left;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  text-align:left;
+}
+
+.footer li {
+  margin: 5px 0;
+}
+
+.footer h3 {
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+}
+.footer_img{
+  padding-top: 25px;
+  width: 250px;
 }

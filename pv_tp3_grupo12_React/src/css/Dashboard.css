@@ -1,0 +1,31 @@
+.dashboard-container {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.dashboard-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard-description {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #555;
+}
+
+.metrics-container {
+  margin-top: 20px;
+}
+
+.metric-card {
+  background-color: #f5f5f5;
+  border-left: 5px solid #1976d2;
+  transition: transform 0.2s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.metric-card:hover {
+  transform: scale(1.05);
+}
