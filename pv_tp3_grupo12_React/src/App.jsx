@@ -3,7 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { UsuarioProvider } from "./context/UsuarioContext";
 
 import Header from './components/Header'
 import Nav from './components/Nav'
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <>
+    <UsuarioProvider>
     <BrowserRouter>
     <Header/>
     <Nav/>
@@ -36,6 +39,7 @@ function App() {
     </main>
     <Footer/>
     </BrowserRouter>
+    </UsuarioProvider>
     </>
   )
 }

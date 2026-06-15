@@ -9,7 +9,6 @@ import FormularioProyecto from "./FormularioProyecto";
 function ListaProyectos() {
   const [proyectos, setProyectos] = useState(obtenerProyectos());
   const [busqueda, setBusqueda] = useState("");
-  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
   const [ultimaActualizacion, setUltimaActualizacion] = useState(null);
 
   const handleBuscar = (e) => {
@@ -24,15 +23,8 @@ function ListaProyectos() {
   const eliminar = (id) => {
     eliminarProyecto(id);
     setProyectos(obtenerProyectos());
-    setProyectoSeleccionado(null);
   };
 
-  const verDetalle = (proyecto) => {
-    setProyectoSeleccionado(proyecto);
-    setTimeout(() => {
-      detallesRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
 
   const [mostrarForm, setMostrarForm] = useState(false);
   const detallesRef = useRef(null);
@@ -77,7 +69,6 @@ function ListaProyectos() {
               key={proyecto.id}
               proyecto={proyecto}
               onEliminar={eliminar}
-              onVerDetalle={verDetalle}
             />
           ))}
         </div>
@@ -87,7 +78,7 @@ function ListaProyectos() {
         )}
 
         <div ref={detallesRef}></div>
-        <Detalles proyecto={proyectoSeleccionado} />
+
       </div>
     </main>
   );
