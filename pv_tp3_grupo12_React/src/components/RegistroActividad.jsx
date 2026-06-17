@@ -1,9 +1,23 @@
 import { Alert } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 
 function RegistroActividad({ ultimaActualizacion }) {
-  if (!ultimaActualizacion) {
-    return <Alert severity="info">Sin cambios aún...</Alert>;
-  }
+  const primerRender = useRef(true);
+  const [mostrar, setMostrar] = useState(false);
+
+  useEffect(() => {
+    if (primerRender.current) {
+      primerRender.current = false;
+      return; // 
+    }
+
+    if (ultimaActualizacion) {
+      setMostrar(true); // 
+    }
+
+  }, [ultimaActualizacion]);
+
+  if (!mostrar) return null;
 
   const fecha = ultimaActualizacion;
 
