@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { obtenerProyectos } from "../services/proyectoService";
-
+import '../css/Detalles.css'
 function DetallesProyectos() {
   const { id } = useParams();
 
