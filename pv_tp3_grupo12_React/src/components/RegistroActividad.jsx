@@ -2,22 +2,21 @@ import { Alert } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 function RegistroActividad({ ultimaActualizacion }) {
+
   const primerRender = useRef(true);
   const [mostrar, setMostrar] = useState(false);
 
   useEffect(() => {
     if (primerRender.current) {
       primerRender.current = false;
-      return; // 
+      return; 
     }
-
     if (ultimaActualizacion) {
-      setMostrar(true); // 
+      setMostrar(true); 
     }
 
   }, [ultimaActualizacion]);
-
-  if (!mostrar) return null;
+  if (!mostrar) return null; 
 
   const fecha = ultimaActualizacion;
 
@@ -30,8 +29,8 @@ function RegistroActividad({ ultimaActualizacion }) {
 
   return (
     <Alert severity="success">
-        Última actualización de la lista: {dia}/{mes}/{anio} a las {horas}:{minutos} hs.
-      </Alert>
+      Última actualización de la lista: {dia}/{mes}/{anio} a las {horas}:{minutos} hs.
+    </Alert>
   );
 }
 
